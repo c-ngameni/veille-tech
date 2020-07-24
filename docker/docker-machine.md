@@ -1,7 +1,7 @@
-docker-machine ls
+`docker-machine ls`
 
-docker-machine start
+`docker-machine start`
 
-docker-machine stop
+`docker-machine stop`
 
-docker-machine restart
+`docker-machine restart`

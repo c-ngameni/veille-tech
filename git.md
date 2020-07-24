@@ -1,37 +1,47 @@
-- Cloner un dépôt dans un nouveau répertoire
+- Cloner un dépôt en local
 
-`git clone` *nom-du-dossier*
+`git clone` *repository-url*
+
 - Créer une branche
 
-`git branch` **nom-de-la-branche**
+`git branch` **branch-name**
+
 - Se positionner sur une branche
 
-`git checkout` __nom-de-la-branche__
+`git checkout` __branch-name__
+
 - Créer une branche, puis se positionner dessus
 
-`git checkout -b <nom-de-la-branche>`
+`git checkout -b <branch-name>`
+
 - Se re-positionner sur la branche précédente
 
 `git checkout @{-1}` | `git checkout -`
+
 - Renommer une branche
 
 `git branch -m <nouveau-nom*>`
+
 - Fusionner 2 branches
 
-`git merge <nom-de-la-branche>`
+`git merge <source-branch-name>`
+
 - Fusionner 2 branches sans faire un commit de merge
 
-`git rebase <nom-de-la-branche>`
+`git rebase <branch-name>`
 
 `git rebase --continue` *en cas de conflits*
 
 `git push --force`
+
 - Supprimer une branche
 
-`git branch -d <nom-de-la-branche>`
+`git branch -d <branch-name>`
+
 - Sauvegarder les modifications en cours sans faire de commit
 
 `git stash`
+
 - Récupérer les modifications sauvegardées
 
 `git stash pop`
@@ -49,6 +59,7 @@
 - Voir les modifications liées à une sauvegarde
 
 `git stash show stash@{`*n*`}` où n est un entier naturel
+
 - Récupérer un fichier spécificique d'une sauvegarde
 
 `git checkout stash@{`*n*`}` *chemin-absolu-du-fichier*
@@ -56,18 +67,54 @@
 - Ordonner
 
 `git for-each-ref --sort=committerdate refs/heads/`
+
 - Pusher une branche locale
 
-`git push --set-upstream origin <nom-de-la-branche>`
-- Appliquer sur une branche les modifications propres à un commit (sur une autre branche)
+`git push --set-upstream origin <branch-name>`
 
-`git cherry-pick -n`
-- Retrouver l'auteur d'une modification
+Appliquer sur une branche les modifications propres à un commit (sur une autre branche) :
+- `git cherry-pick -n <commit-SHA>`
 
-`git blame <nom-du-fichier.extension>`
-- Ajouter un fichier à committer
+Retrouver l'auteur d'une modification :
+- `git blame <filename>`
 
-`git add <nom-du-fichier>`
-- Retirer un fichier avant de committer
+Ajouter un fichier à committer :
+- `git add <filename>`
 
-`git reset <nom-du-fichier>`
+Retirer un fichier avant de committer :
+- `git reset <filename>`
+
+Définir la branche distante :
+- `git branch --set-upstream-to=origin/<branch-name>`
+
+Voir les répertoires distants :
+- `git remote -v`
+
+Voir les branches du répertoire distant :
+- `git ls-remote`
+
+Récupérer une branche distante :
+- `git fetch origin <branch-name>`
+
+Créer une branche à partir d'une branche distante :
+- `git checkout --track origin/<branch-name>`
+
+Comparer 2 branches :
+- `git diff <branch-1> <branch-2>`
+
+Voir les fichiers modifiés entre 2 commits :
+- `git diff --stat <commit-SHA-1> <commit-SHA-2>`
+
+Voir l'historique sur une ligne :
+- `git log --oneline`
+
+Voir l'historique de **tous** les changements :
+- `git reflog`
+
+# Le commit
+
+# Le travail avec les branches
+
+# L'historique
+
+# L'affichage des différences

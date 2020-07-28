@@ -16,6 +16,12 @@ Afficher tous les alias :
 
 - alias gpu=git push
 
+- alias gsp=git stash pop
+
+<!--- alias develop=git stash && git checkout develop && git pull origin develop-->
+
+- alias gb=git branch
+
 # Alias Maven
 - alias mc=mvn clean
 

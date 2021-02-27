@@ -6,7 +6,7 @@
 
 `git config user.name <username>`
 
-`git config email <email>`
+`git config user.email <email>`
 
 - Créer une branche
 

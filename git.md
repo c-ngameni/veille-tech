@@ -2,6 +2,12 @@
 
 `git clone` *repository-url*
 
+- Configurer le nom d'utilisateur et l'e-mail
+
+`git config user.name <username>`
+
+`git config email <email>`
+
 - Créer une branche
 
 `git branch` **branch-name**

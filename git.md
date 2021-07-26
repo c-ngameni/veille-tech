@@ -66,6 +66,10 @@
 
 `git stash show stash@{`*n*`}` où n est un entier naturel
 
+- Vider la stash
+
+`git stash clear`
+
 - Récupérer un fichier spécificique d'une sauvegarde
 
 `git checkout stash@{`*n*`}` *chemin-absolu-du-fichier*

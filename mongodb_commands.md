@@ -27,3 +27,13 @@ Supprimer un document :
 
 Supprimer des documents :
 - `db.<collection-name>.deleteMany(<filter>)`
+
+Créer un index :
+- `db.<collection-name>.ensureIndex(keys, options)`
+
+Afficher la liste des index sur une collection :
+- `db.<collection-name>.getIndexes()`
+
+Supprimer un index :
+- `db.<collection-name>.dropIndex(<index-name>)`
+- `db.<collection-name>.dropIndexes(<index-name>)`

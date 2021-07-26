@@ -1,16 +1,16 @@
--  Installer les dépendances
+-  Installer les dépendances :
 
 `npm install`
 
-- Installer et enregistrer une dépendance (mise à jour du champ **dependencies** de package.json)
+- Installer et enregistrer une dépendance (mise à jour du champ **dependencies** de package.json) :
 
-`npm install <dependencie-name> --save`
+`npm install <dependency-name> --save`
 
-- Installer et enregistrer une dépendance de développement (mise à jour du champ **devDependencies** de package.json)
+- Installer et enregistrer une dépendance de développement (mise à jour du champ **devDependencies** de package.json) :
 
-`npm install <dependencie-name> --save-dev`
+`npm install <dependency-name> --save-dev`
 
-- Lancer le serveur NodeJS
+- Lancer le serveur NodeJS :
 
 `npm start`
 
@@ -18,22 +18,18 @@
 
 `npm run build`
 
-- Récupérer le proxy
+- Récupérer le proxy :
 
 `npm config get proxy`
 
-- Récupérer l'ensemble des configurations de NodeJS
+- Récupérer l'ensemble des configurations de NodeJS :
 
 `npm config ls -l`
 
-- Vérifier la version d'Angular-cli
+- Afficher les packages installés globalement :
 
-`ng --version`
+`npm list -g`
 
-- Générer un fichier avec l'extension *model*.ts
+- Afficher les versions d'un package :
 
-`ng generate class <file-name> --type=`*model*
-
-- Générer un composant sans le fichier de test
-
-`ng generate component <component-name> --no-spec`
+`npm view <module-name> versions`
